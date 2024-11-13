@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "460867624360",
+    "project_id": "ipo-app-39c4e",
+    "storage_bucket": "ipo-app-39c4e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460867624360:android:c88eba6b2d3dbcb116519d",
+        "android_client_info": {
+          "package_name": "com.sc.ipo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460867624360-iosf0of9306r3lsskt4kr4v3elk1bd18.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sc.ipo",
+            "certificate_hash": "64e56a5b6ec1129dc0de8a0fe142fdbe4944884b"
+          }
+        },
+        {
+          "client_id": "460867624360-nspjk2721dtjb7n4r74v3eqep4o1k1ee.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKlmfuabuYaET8N1az7TYs373g-XCWP-c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "460867624360-nspjk2721dtjb7n4r74v3eqep4o1k1ee.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
