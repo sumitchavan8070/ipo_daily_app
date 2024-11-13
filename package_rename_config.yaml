@@ -8,7 +8,7 @@ package_rename_config:
   ios:
     app_name: IPO Daily # (String) The display name of the ios app
     bundle_name: # (String) The bundle name of the ios app
-    package_name: com.sc.ipo # (String) The product bundle identifier of the ios app
+    package_name: com.sc.ipodaily # (String) The product bundle identifier of the ios app
 #
 #  linux:
 #    app_name: # (String) The window title of the linux app

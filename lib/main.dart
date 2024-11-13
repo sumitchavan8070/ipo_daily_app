@@ -129,7 +129,7 @@ class _MyAppState extends State<MyApp> {
           child: child!,
         );
       },
-      title: 'IPO Live GMP - ipodaily',
+      title: 'IPO Daily',
       routerConfig: goRouterConfig,
       themeMode: ThemeMode.light,
       theme: ThemeData(
