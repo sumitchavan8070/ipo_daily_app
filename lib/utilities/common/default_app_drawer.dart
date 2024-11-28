@@ -1,4 +1,5 @@
 import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -180,9 +181,9 @@ class _DefaultCustomDrawerState extends State<DefaultCustomDrawer> with TickerPr
                           _hiddenDrawerController.scaffoldKey.currentState?.closeDrawer();
                           logger.e(data?.path);
 
-                          if(data?.path == GoPaths.contactUs){
+                          if (data?.path == GoPaths.contactUs) {
                             launchEmail(email: "sdchavan8070@gmail.com");
-                            return ;
+                            return;
                           }
 
                           if (isLoggedIn()) {
@@ -295,7 +296,7 @@ Widget dynamicImage({
   final isNetworkImage = image?.startsWith("https") == true;
 
   if (isNetworkImage == true) {
-    if (image!.endsWith(".svg")) {
+    if (image!.endsWith("allotment.svg")) {
       return SvgPicture.network(
         image,
         height: height ?? 24,
@@ -323,7 +324,7 @@ Widget dynamicImage({
     );
   }
 
-  if (image.contains(".svg")) {
+  if (image.contains("allotment.svg")) {
     return SvgPicture.asset(
       image,
       height: height ?? 24,

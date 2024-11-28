@@ -11,6 +11,7 @@ import 'package:ipodaily/utilities/common/default_app_drawer.dart';
 import 'package:ipodaily/utilities/common/drawer_controller.dart';
 import 'package:ipodaily/utilities/firebase/analytics_service.dart';
 import 'package:ipodaily/utilities/firebase/core_prefs.dart';
+import 'package:ipodaily/utilities/navigation/go_paths.dart';
 import 'package:ipodaily/utilities/navigation/navigator.dart';
 import 'package:ipodaily/utilities/theme/app_box_decoration.dart';
 import 'package:ipodaily/utilities/theme/app_colors.dart';
@@ -132,7 +133,18 @@ class _LandingViewState extends State<LandingView> {
     if (selectedIndex == index) {
       return;
     }
+    if (route == GoPaths.webView) {
+      MyNavigator.pushNamed(
+        GoPaths.webView,
+        extra: {
+          'url': _defaultController.state?.allotment ?? "https://ris.kfintech.com/ipostatus/",
+          'title': "Ipo Allotment",
+        },
+      );
+      return;
+    }
     selectedIndex = index;
+
     MyNavigator.go(route, extra: {"isAppBarHide": true});
     debugPrint("route navigated to: $route");
   }

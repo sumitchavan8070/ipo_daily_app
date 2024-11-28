@@ -35,11 +35,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         children: [
           _buildIsBackButton(
             isBackButton ?? true,
-                () {
+            () {
               context.pop();
             },
           ),
-          // SvgPicture.asset(AssetPath.titleIcon, height: 50, width: 50),
           const SizedBox(width: 18),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
