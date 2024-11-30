@@ -49,6 +49,7 @@ dependencies:
   firebase_auth: ^4.16.0
   in_app_review: ^2.0.9
   flutter_html: ^3.0.0-beta.2
+#  webview_flutter: ^4.8.0
 
 dev_dependencies:
   flutter_test:
@@ -109,6 +110,7 @@ flutter_native_splash:
   android: true
   ios: true
   color: "#FFFFFF"
-  image: "assets/icons/logo.png"
+#  image: "assets/icons/logo.png"
+  image: "assets/icons/user_splash.png"
   android_12:
-    image: "assets/icons/logo.png"
+    image: "assets/icons/user_splash.png"

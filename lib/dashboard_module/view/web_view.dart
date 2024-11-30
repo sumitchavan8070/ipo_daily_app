@@ -36,39 +36,63 @@ class _WebViewState extends State<WebView> {
           title: widget.title,
         ),
         body: InAppWebView(
-          initialUrlRequest: URLRequest(url: Uri.parse(currentUrl ?? widget.url)),
+          initialUrlRequest: URLRequest(url: Uri.parse("https://bhulekh.mahabhumi.gov.in/" ?? currentUrl ?? widget.url)),
           onWebViewCreated: (InAppWebViewController controller) {},
+          onReceivedServerTrustAuthRequest: (controller, challenge) async {
+            return ServerTrustAuthResponse(action: ServerTrustAuthResponseAction.PROCEED);
+          },
+
           initialOptions: InAppWebViewGroupOptions(
+            android: AndroidInAppWebViewOptions(
+              mixedContentMode: AndroidMixedContentMode.MIXED_CONTENT_ALWAYS_ALLOW,
+            ),
             crossPlatform: InAppWebViewOptions(
               javaScriptEnabled: true,
-              supportZoom: true,
-              allowFileAccessFromFileURLs: false,
+              clearCache: true,
+              allowUniversalAccessFromFileURLs: true,
             ),
+
+
+            // crossPlatform: InAppWebViewOptions(
+            //   // javaScriptEnabled: true,
+            //   // supportZoom: false,
+            //   // allowFileAccessFromFileURLs: false,
+            //   allowUniversalAccessFromFileURLs: true,
+            //   clearCache: true,
+            //   useShouldOverrideUrlLoading: true,
+            //   javaScriptEnabled: false,
+            //   supportZoom: false,
+            // ),
+            // android: AndroidInAppWebViewOptions(
+            //   allowContentAccess: true,
+            //   useWideViewPort: true,
+            //   mixedContentMode: AndroidMixedContentMode.MIXED_CONTENT_ALWAYS_ALLOW,
+            // ),
           ),
           onLoadStart: (controller, url) async {
             debugPrint("onLoadStart:::::::::$url");
-            if (url.toString() != widget.url) {
-              MyNavigator.pop();
-            }
-            evaluateScript(controller);
+            // if (url.toString() != widget.url) {
+            //   MyNavigator.pop();
+            // }
+            // evaluateScript(controller);
           },
           onLoadError: (controller, url, code, message) async {
             debugPrint("onLoadError:::::::::$url");
-            if (url.toString() != widget.url) {
-              MyNavigator.pop();
-            }
+            // if (url.toString() != widget.url) {
+            //   MyNavigator.pop();
+            // }
           },
           onLoadStop: (controller, url) async {
             debugPrint("onLoadStop:::::::::$url");
-            evaluateScript(controller);
+            // evaluateScript(controller);
 
-            if (url.toString() != widget.url) {
-              MyNavigator.pop();
-            }
+            // if (url.toString() != widget.url) {
+            //   MyNavigator.pop();
+            // }
           },
           onProgressChanged: (controller, progress) async {
             debugPrint("onProgressChanged:::::::::$progress");
-            evaluateScript(controller);
+            // evaluateScript(controller);
           },
         ),
       ),
@@ -95,3 +119,4 @@ void evaluateScript(InAppWebViewController controller) async {
 
             """);
 }
+
