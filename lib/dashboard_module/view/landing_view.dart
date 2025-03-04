@@ -130,14 +130,14 @@ class _LandingViewState extends State<LandingView> {
   }
 
   _changeRoute(int index, String route) {
-    MyNavigator.pushNamed(
-      GoPaths.webView,
-      extra: {
-        'url': "https://bhulekh.mahabhumi.gov.in/",
-        'title': "MahaBhumi",
-      },
-    );
-    return;
+    // MyNavigator.pushNamed(
+    //   GoPaths.webView,
+    //   extra: {
+    //     'url': "https://bhulekh.mahabhumi.gov.in/",
+    //     'title': "MahaBhumi",
+    //   },
+    // );
+    // return;
     if (selectedIndex == index) {
       return;
     }
